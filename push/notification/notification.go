@@ -23,6 +23,7 @@ type Notificationer interface {
 	SetExtras(extra map[string]string) Notificationer
 	SetSilent() Notificationer
 	SetBadge(badge string) Notificationer
+	SetSound(sound string) Notificationer
 	Send() (string, error)
 }
 

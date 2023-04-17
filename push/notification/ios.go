@@ -68,3 +68,11 @@ func (n *IOSNotification) SetBadge(badge string) Notificationer {
 	n.Payload.GetAPNs().Badge = badge
 	return n
 }
+
+func (n *IOSNotification) SetSound(sound string) Notificationer {
+	if sound != "" {
+		n.Payload.GetAPNs().SetSound(sound)
+	}
+
+	return n
+}

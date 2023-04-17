@@ -68,3 +68,11 @@ func (n *AndroidNotification) SetSilent() Notificationer {
 func (n *AndroidNotification) SetBadge(badge string) Notificationer {
 	return n
 }
+
+func (n *AndroidNotification) SetSound(sound string) Notificationer {
+	if sound != "" {
+		n.Payload.Body.SetSound(sound)
+	}
+
+	return n
+}
